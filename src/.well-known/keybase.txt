@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/kylekeesling
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://kylekeesling.dev
+  * I am kylekeesling (https://keybase.io/kylekeesling) on keybase.
+  * I have a public key with fingerprint 4011 27E5 ADB2 5CC7 FC50  FF9C D906 21B5 5F82 D202
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010188b746cbff6a70a65bb8bb7b4d5253c09617a990dc6d10637bf82d6714a0b24d0a",
+      "fingerprint": "401127e5adb25cc7fc50ff9cd90621b55f82d202",
+      "host": "keybase.io",
+      "key_id": "d90621b55f82d202",
+      "kid": "010188b746cbff6a70a65bb8bb7b4d5253c09617a990dc6d10637bf82d6714a0b24d0a",
+      "uid": "04cb5469b7c3d96a94ec6ca264fc2000",
+      "username": "kylekeesling"
+    },
+    "service": {
+      "hostname": "kylekeesling.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1578748734,
+  "expire_in": 157680000,
+  "prev": "b60b1a309d8d7e1ed56af55634b928857f2b33ed3221e99524cb787e21beb631",
+  "seqno": 38,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+yMIkAnicrZJNSFRRFMdnzA8yJBeB1dCim5mIyH33vXffR5JBEambFkZF2vTux9OX
+08w48xw1mYKBiMhsUZuMrEhTsTAyWpSQSkokhEqLAjFSKlxEH/QBldR9VjuXrS73
+nP/5nf85nEc5K3zZ/n6z+dngzzPj/omRq42+Q+smtrUCEmEtwGwF9Xzp4SHG426w
+3mHABFCCkq4TTcGU2Da2NGhhlRCdEI0oTEWqTKGBJc0yDMgoZhLEskZsHTGsSYoF
+CVIYtEAxsJ1wLY9FY07YFVgFShLSuGoxglRKNZuq0LYNygyIkURU1SMgiERhXSTu
+VQhzxIrzEiciYuITXLK3jP4/+278g1MoURVsEI3KzMCWoXCKqYWwYlMEIfSEcR4L
+W0e557UlxOs5j4fEzCBZDEQm4VDuLdebZhlVCeMJwYjGIm6ERkIiW+e60bjpVbst
+UU/exEnwLyhInDDz2MUgwWNxJxIGpiSU1HU8sqRquqbomqwUA94cdWI86ISXwlgX
+XqHXR7QzAcGQSJYMDaYzjUucqdiyVRXLCjGQrquajYgscyYjJHHDUJHYgkBzsXFO
+sCwBb7SGcASYsi58WrWCGXdqw5bbGOMgOTpcne7zZ/syM9K8Q/Nlr8z9d37pU1m/
+Ksa6dg2WVTe4F/Gt5rxjbk+PVppfcGPTbN/9e2PPC/TPL0vq5puGlA8DeVXll4YO
+DW3Lq9pC24qebM2pKc04vibQ+nXuSHcg//zZ9gfzDTt6+zKrgN9390tFacYMGr3c
+vHjt9YYfP8yi2c7Fjv2+1fhmfru0KnHqYc/tyrTAZEdlZjo5+OFcRdr7r5Xdw1Zy
+caT9dfZC2Z7tn690ZIWe5qbuLGyfrG/6dOLk/bWr3iZ2p8rkrtSbY/Ljyhd7D6fG
+A3c1ZwpN7Bvt7MjfnNrYX/p9ei462/Zlhhy4Pt8931tzJ3V657dy/4B9fPqV+bGk
+aLDp3UIuzek/ldQvFBYqXet/A2ezQ4Y=
+=f2sx
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kylekeesling
+
+==================================================================

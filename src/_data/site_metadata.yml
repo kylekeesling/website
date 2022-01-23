@@ -1,0 +1,11 @@
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.metadata.title }}, {{ site.metadata.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.metadata.myvariable }}.
+
+title: Kyle Keesling
+tagline: an Indianapolis-based Rubyist & Full-stack Developer
+email: me@kylekeesling.com
+description: >-
+  Kyle Keesling is an Indianapolis-based Ruby on Rails developer. He enjoys coding, cargo bikes, and playing hurling.
