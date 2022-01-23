@@ -4,10 +4,10 @@ front: yes
 title: Kyle Keesling - An Indianapolis-based Pixel Pusher
 ---
 
-<ul>
+<ul class="list-disc">
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
+      <a class="underline" href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
