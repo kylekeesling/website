@@ -4,14 +4,8 @@ title: About Kyle
 permalink: /about/
 ---
 
-<div class="row post-content">
-  <div class="col-md-10 col-md-offset-1">
-    <h2 class="postTitle">{{ page.title }}</h2>
-    <p>I am an Indianapolis-based developer that's currently helping to run
-      <a href="https://passtesting.com">PASS Training & Compliance</a> for over 10 years and counting.
-      Prior to that I spent time in marketing and solution consulting at
-      <a href="https://www.crunchbase.com/organization/exacttarget">ExactTarget</a> (now Salesforce).
-    </p>
-  </div>
-</div>
+# 👋 Hi There
 
+I'm Kyle Keesling. I've been a Ruby on Rails developer since 2008. I helped start a software company called PASS where I've designed and built both of our software products.
+
+Being my company's only programmer I've always wanted to come up with a good way to share what I've learned with others, so I hope you find my articles and courses interesting and helpful!
