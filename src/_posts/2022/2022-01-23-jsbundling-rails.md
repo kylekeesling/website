@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Migrating to jsbundling-rails"
+tags: rails, ruby, esbuild, webpacker
 date:   2022-01-23 11:00:00 -0500
 categories: rails ruby javascript
 ---
@@ -10,7 +11,7 @@ using one of the solutions offered by [jsbuilding-rails](https://github.com/rail
 
 With the move comes a much simplier javascript story, which is a welcome change for many of us,
 but making the move can quickly lead to a few gotchas. Below I'll outline the few that I've run into
-and how you can avoid them so you can ensure a smooth transition to using the esbuild.
+and how you can avoid them so you can ensure a smooth transition to using esbuild.
 
 ## Gotcha #1 - Importing CSS in your Javascript
 
