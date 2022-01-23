@@ -26,10 +26,6 @@ permalink: /posts/:year/:month/:title
 paginate: 10
 paginate_path: page:num
 
-markdown: kramdown #redcarpet
-markdown_ext: markdown,mkd,mkdn,md
-highlighter: rouge
-
 include: [".well-known"]
 # Other options you might want to investigate:
 #
