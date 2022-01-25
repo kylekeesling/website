@@ -1,0 +1,70 @@
+---
+layout: default
+front: yes
+title: Kyle Keesling - An Indianapolis-based Rubyist and Full-stack Developer
+---
+
+<div class="relative max-w-lg mx-auto lg:max-w-7xl my-8">
+  <div class="space-y-4 sm:grid sm:grid-cols-4 sm:items-start sm:gap-6 sm:space-y-0 ">
+    <div>
+      <img class="object-cover shadow-lg rounded-lg"
+           src="images/kyle-keesling.jpg"
+           alt="Kyle keesling">
+    </div>
+    <div class="sm:col-span-3 prose">
+      <div>
+        <h1 class="tracking-tight">👋 Hi there</h1>
+        <p>I'm <strong>Kyle Keesling</strong>. I've been a Ruby on Rails developer since 2008. I helped start a
+          software company called
+          <a href="https://passtesting.com">PASS</a> where I've designed and built both of our software products.
+        </p>
+
+        <p>Being my company's only programmer I've always wanted to come up with a good way to share what I've learned
+          with
+          others,
+          so I hope you find my courses and content interesting and helpful!</p>
+      </div>
+    </div>
+  </div>
+  <div class="border-b-2">
+    <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl mt-4">
+      Recent Posts
+    </h2>
+  </div>
+  <div class="mt-2 grid gap-16 pt-6 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+    {% for post in site.posts limit:3 %}
+    <div>
+      <a href="{{ post.url }}" class="block mt-2">
+        <p class="text-xl font-semibold text-gray-900">
+          {{ post.title }}
+        </p>
+        <p class="mt-3 text-base text-gray-500">
+          {{ post.blurb || post.excerpt }}
+        </p>
+      </a>
+      <div class="mt-2 flex items-center">
+        <div>
+          <div class="flex space-x-1 text-sm text-sky-500 font-bold">
+            <time datetime="{{ post.date | date: " %Y-%m-%d" }}">
+              {{ post.date | date: "%B %d, %Y" }}
+            </time>
+
+            <!-- <span aria-hidden="true">
+                        &middot;
+                      </span>
+                      <span>
+                        6 min read
+                      </span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="mt-8 grid justify-items-end">
+    <a href="/posts"
+       class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
+      View Older Posts →
+    </a>
+  </div>
+</div>

@@ -2,7 +2,10 @@
 layout: post
 title:  Abstraction Languages
 date:   2013-10-30 15:17:00
-categories: html development abstraction
+categories:
+  - html
+  - development
+  - abstraction
 ---
 
 Abstraction languages ([Jade][jade-link], [HAML][haml-link], [SASS][sass-link], [LESS][less-link], [CoffeeScript][coffee-link]) have been around for awhile but it seems that the idea has grown in popularity over the last year or two. This isn't necessarily a bad thing, but it does raise an interesting question: *Why* ?

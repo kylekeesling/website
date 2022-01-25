@@ -2,7 +2,13 @@
 layout: post
 title:  Add Stripe Checkout to your Rails app in Under 10 Minutes
 date:   2022-01-24 013:45:00 -0500
-categories: updates
+categories:
+  - stripe
+  - rails
+  - turbo
+  - video
+blurb: |
+  A quick runthrough of how useful Stripe Checkout can be
 ---
 
 <div style="text-align: center;">

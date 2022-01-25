@@ -4,7 +4,10 @@ title:      Rails Testing
 # link:     #used if linking the post out to another website
 # source:   #used for naming the source of your link
 date:       2014-11-10 22:17:47
-categories: rails,testing,tweets
+categories:
+  - rails
+  - testing
+  - tweets
 ---
 
 Below is a series of tweets that I should've composed a quick post out of rather than rapid-firing it out over twitter. Maybe I'll come up with some more to say about this here before long.

@@ -3,7 +3,12 @@ layout: post
 title:  "Migrating to jsbundling-rails"
 tags: rails, ruby, esbuild, webpacker
 date:   2022-01-23 11:00:00 -0500
-categories: rails ruby javascript
+categories:
+  - rails
+  - webpacker
+  - javascript
+blurb: |
+  Now that Webpacker is riding off into the sunset, many of us find ourselves switching over to using one of the solutions offered by jsbuilding-rails.
 ---
 
 Now that [Webpacker is riding off into the sunset](https://github.com/rails/webpacker/commit/16bba5d6ca862b950a002f19c10d12e4bf51a87b#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5), many of us find ourselves switching over to

@@ -4,7 +4,11 @@ title:    Piping Your Honeybadger Events to Basecamp with Zapier
 # link:     https://gist.github.com/kylekeesling/b7d2571de44f2ad8f5cf
 # source:   #used for naming the source of your link
 date:       2019-07-03 13:30:00
-categories: basecamp, honeybadger, zapier, webhooks
+categories:
+  - basecamp
+  - honeybadger
+  - zapier
+  - webhooks
 ---
 
 My team has been working on consolidating and improving our communication tools

@@ -1,5 +1,5 @@
 <nav>
-  <div class="bg-blue-dark pt-5 px-8 pb-10 text-white shadow-md" id="header">
+  <div class="bg-sky-700 pt-5 px-8 pb-10 text-white shadow-md" id="header">
     <a href="/">
       <img src="/images/logo.png" style="height: 50px;" alt="Kyle Keesling">
     </a>
@@ -7,47 +7,69 @@
 
     <ul class="list-reset pt-4">
       <li class="float-left pr-4">
-        <a class="text-white hover:text-grey-400" href="/">
-          <i class="fa fa-home"></i> Home
+        <a class="text-white hover:text-stone-400 inline-flex items-center" href="/">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path
+                  d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
+          Home
         </a>
       </li>
       <li class="float-left pr-4">
-        <a class="text-white hover:text-grey-400" href="/about" title="About Kyle">
-          <i class="fa fa-info-circle"></i> About
-        </a>
-      </li>
-      <li class="float-left pr-4">
-        <a class="text-white hover:text-grey-400" href="http://twitter.com/kylekeesling" title="Twitter">
-          <i class="fa fa-twitter"></i> Twitter
-        </a>
-      </li>
-      <li class="float-left pr-4">
-        <a class="text-white hover:text-grey-400" href="http://github.com/kylekeesling" title="GitHub">
-          <i class="fa fa-github"></i> Github
-        </a>
-      </li>
-      <li class="float-left pr-4">
-        <a class="text-white hover:text-grey-400" href="https://store.kylekeesling.com" title="My Courses">
-          <i class="fa fa-university"></i> Courses
-        </a>
-      </li>
-      <li class="float-left pr-4">
-        <a class="text-white hover:text-grey-400" href="/feed.xml" title="Subscribe">
-          <i class="fa fa-rss"></i> RSS
+        <a class="text-white hover:text-stone-400 inline-flex items-center" href="https://store.kylekeesling.com"
+           title="My Courses">
+
+          <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path
+                  d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+          </svg>
+          Courses
         </a>
       </li>
     </ul>
   </div>
 </nav>
-<div class="rounded-md bg-blue-lightest p-2 mb-4 border-b-1 border-grey-dark">
-  <div class="flex">
-    <div class="ml-3 flex-1 md:flex md:justify-between">
-      <p class="text-sm text-blue">
-        <a href="https://store.kylekeesling.com/stripe-on-rails">
-          I'm currently developing <strong>The Complete Guide to Stripe Invoicing & Subscriptions with Ruby on
-            Rails</strong>. Sign up for updates to know when it's ready →
+
+<div class="bg-sky-600">
+  <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between flex-wrap">
+      <div class="w-0 flex-1 flex items-center">
+        <span class="flex p-2 rounded-lg bg-sky-800">
+          <!-- Heroicon name: outline/speakerphone -->
+          <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+               stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+          </svg>
+        </span>
+        <p class="ml-3 font-medium text-white truncate">
+          <span class="md:hidden">
+            <a href="https://store.kylekeesling.com/stripe-on-rails">
+              I'm currently developing a new Rails course
+            </a>
+          </span>
+          <span class="hidden md:inline">
+            <a href="https://store.kylekeesling.com/stripe-on-rails">
+              I'm currently developing <strong>The Complete Guide to Stripe Invoicing & Subscriptions with Ruby on
+                Rails</strong>.
+            </a>
+          </span>
+        </p>
+      </div>
+      <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+        <a href="https://store.kylekeesling.com/stripe-on-rails"
+           class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-sky-600 bg-white hover:bg-sky-50">
+          Learn more
         </a>
-      </p>
+      </div>
+      <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+        <button type="button"
+                class="-mr-1 flex p-2 rounded-md hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2">
+          <span class="sr-only">Dismiss</span>
+          <!-- Heroicon name: outline/x -->
+
+        </button>
+      </div>
     </div>
   </div>
 </div>

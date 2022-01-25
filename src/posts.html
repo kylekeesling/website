@@ -1,0 +1,13 @@
+---
+layout: page
+title: All Posts
+permalink: /posts/
+---
+
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <a class="hover:underline" href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>

@@ -2,7 +2,11 @@
 layout:   post
 title:    Getting Honeybadger Uptime Alerts via SMS with Zapier
 date:       2019-09-04 09:00:00
-categories: honeybadger, zapier, webhooks, sms
+categories:
+  - honeybadger
+  - zapier
+  - webhooks
+  - sms
 ---
 
 *UPDATE: Shortly after posting this Honeybadger was [kind enough to let me know](https://twitter.com/honeybadgerapp/status/1169684671556308992)

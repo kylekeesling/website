@@ -2,7 +2,11 @@
 layout:   post
 title:    Setting Up Proper Amazon S3 Permissions for ActiveStorage
 date:       2020-01-28 17:43:00
-categories: rails, ruby, activestorage, s3
+categories:
+  - rails
+  - ruby
+  - activestorage
+  - s3
 ---
 
 If you've found yourself marveling at how cryptic and impenetrable understanding AWS services, then you are definitely not alone. For much too long have I relied on doing a quick web search and blindly copying and pasting settings and policies, so when I found myself doing it again this week for [one of my applications](https://passtesting.com/tools/service-providers) I decided it was time to slow down and actually understand what it was that I was doing.

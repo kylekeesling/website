@@ -4,7 +4,11 @@ title:    Migrating Your Assets from Paperclip to ActiveStorage
 # link:     https://gist.github.com/kylekeesling/b7d2571de44f2ad8f5cf
 # source:   #used for naming the source of your link
 date:       2018-04-26 08:00:00
-categories: ruby, rails, activestorage, paperclip
+categories:
+  - ruby
+  - rails
+  - activestorage
+  - paperclip
 ---
 
 With the release of Rails 5.2 there is now a native, built in way to handle asset uploads and management called [ActiveStorage][activestorage], making the need to use gems like [Paperclip][paperclip], [Carrierwave][carrierwave], or [Fog][fog], with Paperclip going so far as writing a [migration guide][paperclip-migrate-issue]; implying that it may not be long for this world.

@@ -2,7 +2,11 @@
 layout:     post
 title:      Creating a Repeating Footer w/ Prawn
 date:       2013-11-14
-categories: rails ruby prawn pdf
+categories:
+  - rails
+  - ruby
+  - prawn
+  - pdf
 ---
 
 I've been using [Prawn][prawnLink] for the past 3 years to generate PDFs in my Rails projects. It has a little bit of a learning curve up front but gives you much more power than just rendering out your web views as PDFs.
