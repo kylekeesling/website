@@ -24,7 +24,7 @@ const output = {
 
 // Rules and Loaders
 
-const jsRule =  {
+const jsRule = {
   test: /\.(js|jsx)/,
   use: {
     loader: "esbuild-loader",
@@ -46,7 +46,7 @@ const cssRules = {
       }
     }
   ],
-  mode: 'sass',
+  mode: 'postcss',
 
   postcss: () => {
     cssRules.use.push("postcss-loader")
