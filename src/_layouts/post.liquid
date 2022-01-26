@@ -16,7 +16,7 @@ layout: default
       </h1>
       <div class="mt-2 flex gap-2 justify-center">
         {% for category in page.categories %}
-        <a href="#">
+        <a href="/categories/{{category}}">
           <span
                 class=" inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-red-100 text-red-800">
             {{ category }}
@@ -28,6 +28,23 @@ layout: default
     </div>
     <div class="mt-6 prose prose-sky prose-lg text-gray-500 mx-auto">
       {{ content }}
+    </div>
+    <div class="my-10 py-4 flex justify-evenly">
+
+      {% if page.next != nil %}
+      <a href="{{ page.next.url }}"
+         class="mb-4 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
+        ← {{ page.next.title }}
+      </a>
+      {% endif %}
+
+      {% if page.previous != nil %}
+      <a href="{{ page.previous.url }}"
+         class="mb-4 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
+        {{ page.previous.title }} →
+      </a>
+      {% endif %}
+
     </div>
   </div>
 </div>

@@ -25,7 +25,8 @@ permalink: /posts/:year/:month/:title
 
 pagination:
   enabled: true
-paginate: 10
+
+paginate: 100
 paginate_path: page:num
 
 include: [".well-known"]
