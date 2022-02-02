@@ -16,7 +16,8 @@
         </a>
       </li>
       <li class="float-left pr-4">
-        <a class="text-white hover:text-stone-400 inline-flex items-center" href="https://store.kylekeesling.com/stripe-on-rails"
+        <a class="text-white hover:text-stone-400 inline-flex items-center"
+           href="/stripe-on-rails"
            title="My Courses">
 
           <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -42,6 +43,8 @@
   </div>
 </nav>
 
+{% if page.url != "/stripe-on-rails/" %}
+
 <div class="bg-sky-600">
   <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between flex-wrap">
@@ -56,12 +59,12 @@
         </span>
         <p class="ml-3 font-medium text-white truncate">
           <span class="md:hidden">
-            <a href="https://store.kylekeesling.com/stripe-on-rails">
+            <a href="/stripe-on-rails">
               I'm currently developing a new Rails course
             </a>
           </span>
           <span class="hidden md:inline">
-            <a href="https://store.kylekeesling.com/stripe-on-rails">
+            <a href="/stripe-on-rails">
               I'm currently developing <strong>The Complete Guide to Stripe Invoicing & Subscriptions with Ruby on
                 Rails</strong>.
             </a>
@@ -69,7 +72,7 @@
         </p>
       </div>
       <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-        <a href="https://store.kylekeesling.com/stripe-on-rails"
+        <a href="/stripe-on-rails"
            class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-sky-600 bg-white hover:bg-sky-50">
           Learn more
         </a>
@@ -85,3 +88,4 @@
     </div>
   </div>
 </div>
+{% endif %}
