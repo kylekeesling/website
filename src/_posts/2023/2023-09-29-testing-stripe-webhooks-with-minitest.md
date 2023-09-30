@@ -14,21 +14,22 @@ blurb: |
 As I was looking to sure up some billing code in one of my projects, I figured it was finally time that
 I created some tests for the various [Stripe webhooks](https://stripe.com/docs/webhooks) that we used.
 
-I was a bit dishearted that the only webhook testing examples I could find when pertained to
+I was a bit dishearted that the only webhook testing examples I could find online pertained to
 RSpec, so with that I rolled up my sleaves and dug into the internals of both the `stripe_event` gem
 as well as [Stripe's offical gem](https://github.com/stripe/stripe-ruby).
 
-After multiple rounds of trial and error I was able to discern how Stripe generates the signature
-for webhooks, and how I could mimic it to test my endpoint. You can see that below in the
+After a few rounds of trial and error I was able to discern how Stripe generates the signature
+for webhooks and how I could mimic it to test my endpoint. You can see that below in the
 `webhook_header` method.
 
-The only other bit of prework you'll need to do is to grab sample payloads for each of the webhook
-events you'd like to test and save them as a JSON file in `test/fixtures/stripe/#{event}.json`,
-as can be seen illustrated in the `webhook_payload` method. If you aren't sure where to grab sample
-payloads from, the [Stripe CLI](https://stripe.com/docs/stripe-cli) has a `trigger` command that
-can make gathering them much easier.
+You'll also need to grab sample payloads for each of the webhook events you'd like to test and save
+them as a JSON file in `test/fixtures/stripe/#{event}.json`, as seen in the `webhook_payload` method.
 
-The only other varaible you may have is the path your your webhook endpoint, which in my
+If you aren't sure where to grab sample payloads from,
+the [Stripe CLI](https://stripe.com/docs/stripe-cli) has a `trigger` command that can make
+gathering them much easier.
+
+The only other varaible you may have is the path to your webhook endpoint, which in my
 case is `stripe_event_path`, as seen in the `deliver_payload` method.
 
 Take all of that and you get the following test case can be used as a base class for any
