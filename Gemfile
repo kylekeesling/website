@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Hello! This is where you manage which Bridgetown version is used to run.
@@ -18,6 +19,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem "bridgetown", "~> 0.21.5"
 
+gem "standard"
 
 group :bridgetown_plugins do
   gem "jekyll-gist"
