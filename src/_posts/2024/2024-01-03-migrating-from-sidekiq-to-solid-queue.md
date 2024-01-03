@@ -31,7 +31,7 @@ The switchover in my case was very straightforward since my use of Sidekiq was a
 - Tweaking my [Solid Queue config](https://github.com/basecamp/solid_queue#configuration)
 
 ## Configuration
-I migrated two apps to Solid Queue. Once of them mainly uses ActiveJob to send emails and run reports,
+I migrated two apps to Solid Queue. One of them mainly uses ActiveJob to send emails and run reports,
 so I simply replied on the default config, but my other app does utilize multiple queues, so I
 ended up with the following config for it:
 
@@ -57,7 +57,7 @@ production:
 My goal here was to create a priorty queue, called `real_time`, so I decided to add a second worker
 dedicated soley to those jobs, and to poll for them at a much higher frequency.
 
-## A Few Gotchas/Considerations
+## A Few Considerations
 My app with the completely vanilla config deployed and worked without a hitch, but I did run into a
 few hiccups with my custom config.
 
