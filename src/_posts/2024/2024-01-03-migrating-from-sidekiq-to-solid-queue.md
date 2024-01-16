@@ -78,35 +78,45 @@ release: bundle exec rails db:migrate
 ```
 
 ### Error Handling
-I use HoneyBadger for error tracking, and I noticed that some jobs were not finishing, but I
-was not notified of any errors. It turns out that this was due to [the default way that Solid Queue reports
-errors](https://github.com/basecamp/solid_queue#other-configuration-settings), which is via the relatively
-new [Rails Error Reporter](https://guides.rubyonrails.org/error_reporting.html).
 
-It turns out that Honeybadger by default hooks into the error reporter, but for some reason it does
-not report errors that report `handled: false`. I was only about to find this out after I did a bit of testing in the
-Rails console:
+_**Note**: A previous version of this post referred to the `on_thread_error` setting to catch job errors. [After some more
+digging](https://github.com/basecamp/solid_queue/issues/120#issuecomment-1894413948) I realized this
+setting is not for job errors but rather actual errors that occur that are related to the thread directly._
 
-```bash
-irb(main):003> Rails.error.report(NotImplementedError.new("asdf"), source: "solid_queue", severity: :error, handled: false)
-=> nil
-irb(main):004> Rails.error.report(NotImplementedError.new("asdf"), source: "solid_queue", severity: :error, handled: true)
-I, [2024-01-03T10:43:10.419883 #2]  INFO -- honeybadger: ** [Honeybadger] Reporting error id=090aa3b3-bd6e-482f-978a-3abacb5aa91e level=1 pid=2
-irb(main):005> I, [2024-01-03T10:43:10.542319 #2]  INFO -- honeybadger: ** [Honeybadger] Success ⚡ https://app.honeybadger.io/notice/090aa3b3-bd6e-482f-978a-3abacb5aa91e id=090aa3b3-bd6e-482f-978a-3abacb5aa91e code=201 level=1 pid=2
-=> nil
-```
-
-So armed with that information I explicity defined how errors should be reported in `production.rb`:
+By default the library silently handles errors and marks them as failed, but I'm prefer being proactively
+notified when something happens. To do this you'll need to leverage an `around_perform` callback to wrap
+your jobs in an error handler, then report them as necessary
 
 ```ruby
- # Use a real queuing backend for Active Job (and separate queues per environment).
-  config.active_job.queue_adapter = :solid_queue
-  config.solid_queue.silence_polling = true
+ class ApplicationJob < ActiveJob::Base
+  around_perform do |job, block|
+    capture_and_record_errors(job, block)
+  end
 
-  config.solid_queue.on_thread_error = ->(exception) {
-    Rails.error.report(exception, source: "solid_queue", severity: :error) # by default handled is set to `true`
-  }
+  def capture_and_record_errors(job, block)
+    block.call
+  # I had to use rescue here instead of a `Rails.error` block because Honeybadger ignores the `Rails.error.report` call
+  # in favor of their own error handler, which is fine in most cases, but unfortunately doesn't work here. Report would be
+  # great here because it re-raises the error, but instead I have to do that manually
+  rescue Exception => e
+    Rails.error.set_context(**error_context(job))
+    Rails.error.report(e)
+    raise e
+  end
+
+  def error_context(job)
+    {
+      active_job: job.class.name,
+      arguments: job.arguments,
+      scheduled_at: job.scheduled_at,
+      job_id: job.job_id
+    }
+  end
+end
 ```
+
+A huge thanks goes out to [Rosa Gutierrez](https://github.com/rosa) for not only her wonderful work on this gem, but also for
+taking the time to respond to Github issues.
 
 ### Failures and Retries
 By default, [Sidekiq has a built-in retry mechanism](https://github.com/sidekiq/sidekiq/wiki/Error-Handling),
