@@ -83,7 +83,7 @@ _**Note**: A previous version of this post referred to the `on_thread_error` set
 digging](https://github.com/basecamp/solid_queue/issues/120#issuecomment-1894413948) I realized this
 setting is not for job errors but rather actual errors that occur that are related to the thread directly._
 
-By default the library silently handles errors and marks them as failed, but I'm prefer being proactively
+By default the library silently handles errors and marks them as failed, but I prefer being proactively
 notified when something happens. To do this you'll need to leverage an `around_perform` callback to wrap
 your jobs in an error handler, then report them as necessary
 
