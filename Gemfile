@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby file: ".ruby-version"
+
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Hello! This is where you manage which Bridgetown version is used to run.
@@ -21,7 +23,6 @@ gem "bridgetown", "~> 0.21.5"
 gem "csv"
 gem "base64"
 gem "bigdecimal"
-
 
 gem "standard"
 
