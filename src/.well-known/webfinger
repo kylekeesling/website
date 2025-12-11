@@ -1,8 +1,8 @@
 {
   "subject": "acct:kylekeesling@ruby.social",
   "aliases": [
-    "https://ruby.social/@kylekeesling",
-    "https://ruby.social/users/kylekeesling"
+    "https://mastodon.social/@kylekeesling",
+    "https://mastodon.social/users/kylekeesling"
   ],
   "links": [
     {
@@ -13,11 +13,11 @@
     {
       "rel": "self",
       "type": "application/activity+json",
-      "href": "https://ruby.social/users/kylekeesling"
+      "href": "https://mastodon.social/users/kylekeesling"
     },
     {
       "rel": "http://ostatus.org/schema/1.0/subscribe",
-      "template": "https://ruby.social/authorize_interaction?uri={uri}"
+      "template": "https://mastodon.social/authorize_interaction?uri={uri}"
     }
   ]
 }
