@@ -13,6 +13,8 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     amazing_print (1.5.0)
     ast (2.4.2)
+    base64 (0.3.0)
+    bigdecimal (3.3.1)
     bridgetown (0.21.5)
       bridgetown-builder (= 0.21.5)
       bridgetown-core (= 0.21.5)
@@ -44,6 +46,7 @@ GEM
       bridgetown-core (= 0.21.5)
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
+    csv (3.3.5)
     erubi (1.12.0)
     faraday (1.10.3)
       faraday-em_http (~> 1.0)
@@ -148,7 +151,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  base64
+  bigdecimal
   bridgetown (~> 0.21.5)
+  csv
   jekyll-gist
   standard
 
